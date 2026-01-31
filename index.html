@@ -8,43 +8,76 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; scroll-behavior: smooth; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        header { 
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
+            color: white; 
+            padding: 1rem 0; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { height: 50px; width: auto; }
+        .firm-name { font-size: 1.2rem; font-weight: bold; margin-left: 1rem; }
         nav ul { display: flex; list-style: none; }
         nav ul li { margin-left: 2rem; }
         nav a { color: white; text-decoration: none; transition: opacity 0.3s; }
         nav a:hover { opacity: 0.8; }
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 150px 2rem 100px; }
+        .hero { 
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
+            color: white; 
+            text-align: center; 
+            padding: 160px 2rem 100px; 
+        }
         .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
         .trust { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
-        .btn { background: #ff6b6b; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; margin: 0 1rem; transition: all 0.3s; }
-        .btn:hover { background: #ff5252; transform: translateY(-2px); }
+        .btn { background: #ef4444; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 8px; display: inline-block; margin: 0 1rem; transition: all 0.3s; font-weight: bold; }
+        .btn:hover { background: #dc2626; transform: translateY(-2px); }
         section { padding: 80px 2rem; max-width: 1200px; margin: 0 auto; }
-        h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
+        h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: #1e3a8a; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card i { font-size: 3rem; color: #667eea; margin-bottom: 1rem; }
+        .card { background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border: 1px solid #e5e7eb; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .card i { font-size: 3.5rem; color: #3b82f6; margin-bottom: 1rem; }
         .flow { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
-        .step { flex: 1; min-width: 200px; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .cta-section { background: #f8f9fa; text-align: center; }
-        .cta-section h2 { margin-bottom: 1rem; }
-        .blog-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: box-shadow 0.3s; }
-        .blog-card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
-        .blog-img { height: 200px; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; }
-        .blog-content { padding: 1.5rem; }
-        .blog-date { color: #666; font-size: 0.9rem; }
-        .blog-title { font-size: 1.3rem; margin: 0.5rem 0; }
-        footer { background: #333; color: white; text-align: center; padding: 3rem 2rem 2rem; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } nav ul { flex-direction: column; gap: 1rem; } .flow { flex-direction: column; } }
+        .step { flex: 1; min-width: 220px; text-align: center; padding: 2.5rem; background: #f8fafc; border-radius: 15px; border: 1px solid #e2e8f0; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .cta-section { background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); text-align: center; }
+        .contact-details { background: white; padding: 3rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); margin-top: 2rem; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center; }
+        .contact-item i { font-size: 2.5rem; color: #3b82f6; margin-bottom: 1rem; }
+        .contact-item h3 { color: #1e3a8a; margin-bottom: 1rem; }
+        .contact-item p a { color: #3b82f6; font-size: 1.1rem; text-decoration: none; font-weight: 500; }
+        .social-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2.5rem; }
+        .social-links a { color: #3b82f6; font-size: 2rem; transition: all 0.3s; padding: 1rem; border-radius: 50%; background: #f1f5f9; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+        .social-links a:hover { color: white; background: #3b82f6; transform: translateY(-3px); }
+        .blog-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s; text-decoration: none; color: inherit; display: block; }
+        .blog-card:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.2); transform: translateY(-5px); }
+        .blog-img { height: 200px; background: linear-gradient(45deg, #1e3a8a, #3b82f6); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; }
+        .blog-content { padding: 2rem; }
+        .blog-date { color: #6b7280; font-size: 0.95rem; font-weight: 500; }
+        .blog-title { font-size: 1.4rem; margin: 1rem 0; color: #1e3a8a; }
+        footer { background: #1e3a8a; color: white; text-align: center; padding: 3rem 2rem 2rem; }
+        .hero-badge { background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: bold; margin-bottom: 2rem; display: inline-block; }
+        @media (max-width: 768px) { 
+            .hero h1 { font-size: 2.5rem; } 
+            nav ul { flex-direction: column; gap: 1rem; padding-top: 1rem; } 
+            .flow { flex-direction: column; }
+            .contact-grid { grid-template-columns: 1fr; }
+            nav { flex-direction: column; padding: 1rem 2rem; }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <h2><i class="fas fa-briefcase"></i> BCS</h2>
+            <div style="display: flex; align-items: center;">
+                <img src="Logo.jpg" alt="Bhatt Consultancy Services - BCS" class="logo">
+                <span class="firm-name">Bhatt Consultancy Services</span>
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#solutions">Solutions</a></li>
@@ -57,6 +90,7 @@
     </header>
 
     <section id="home" class="hero">
+        <div class="hero-badge">BHATT CONSULTANCY SERVICES</div>
         <h1>Everything Your Business Needs. One Trusted Partner.</h1>
         <p>Strategy, finance, compliance, technology, and manpower — delivered through a single, accountable advisory partner.</p>
         <div class="trust">Serving startups, SMEs, and growing enterprises across India & global markets.</div>
@@ -66,7 +100,7 @@
 
     <section id="solutions">
         <h2>A Complete Business Solutions Ecosystem</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">BCS brings together advisory, execution, and ongoing support — so businesses don’t have to manage multiple vendors.</p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #6b7280; font-size: 1.1rem;">Bhatt Consultancy Services brings together advisory, execution, and ongoing support — so businesses don't have to manage multiple vendors.</p>
         <div class="grid">
             <div class="card">
                 <i class="fas fa-lightbulb"></i>
@@ -101,8 +135,8 @@
         </div>
     </section>
 
-    <section id="why" style="background: #f8f9fa;">
-        <h2 style="color: #333;">Why Businesses Choose BCS</h2>
+    <section id="why" style="background: #f8fafc;">
+        <h2>Why Businesses Choose Bhatt Consultancy Services</h2>
         <div class="why-grid">
             <div class="card">
                 <i class="fas fa-user-check"></i>
@@ -128,18 +162,18 @@
     </section>
 
     <section id="how">
-        <h2>Our Engagement Model</h2>
+        <h2>Bhatt Consultancy Services Engagement Model</h2>
         <div class="flow">
-            <div class="step"><i class="fas fa-search" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>1. Understand</h3><p>Diagnostic & needs assessment.</p></div>
-            <div class="step"><i class="fas fa-map" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>2. Design Roadmap</h3><p>Clear scope, timeline & ownership.</p></div>
-            <div class="step"><i class="fas fa-rocket" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>3. Execute</h3><p>In-house + vetted partners.</p></div>
-            <div class="step"><i class="fas fa-headset" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>4. Ongoing Support</h3><p>Continuous improvement.</p></div>
+            <div class="step"><i class="fas fa-search" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; display: block;"></i><h3>1. Understand</h3><p>Diagnostic & needs assessment.</p></div>
+            <div class="step"><i class="fas fa-map" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; display: block;"></i><h3>2. Design Roadmap</h3><p>Clear scope, timeline & ownership.</p></div>
+            <div class="step"><i class="fas fa-rocket" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; display: block;"></i><h3>3. Execute</h3><p>In-house + vetted partners.</p></div>
+            <div class="step"><i class="fas fa-headset" style="font-size: 3rem; color: #3b82f6; margin-bottom: 1rem; display: block;"></i><h3>4. Ongoing Support</h3><p>Continuous improvement.</p></div>
         </div>
     </section>
 
-    <section id="insights" style="background: #f8f9fa;">
-        <h2>Latest Insights & Blogs</h2>
-        <p style="text-align: center; margin-bottom: 3rem;">Stay ahead with expert articles on tax updates, startups, and business growth.</p>
+    <section id="insights" style="background: #f8fafc;">
+        <h2>Bhatt Consultancy Services Insights</h2>
+        <p style="text-align: center; margin-bottom: 3rem; color: #6b7280;">Stay ahead with expert articles on tax updates, startups, and business growth.</p>
         <div class="grid">
             <a href="/blog/gst-2026-updates.html" class="blog-card">
                 <div class="blog-img"><i class="fas fa-file-invoice"></i></div>
@@ -165,42 +199,41 @@
                     <p>Comparison for accounting efficiency.</p>
                 </div>
             </a>
-            <a href="/blog/hr-manpower-outsourcing.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-users"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Jan 22, 2026</div>
-                    <h3 class="blog-title">Manpower Solutions for Scaling Startups</h3>
-                    <p>HR outsourcing without the hassle.</p>
-                </div>
-            </a>
-            <a href="/blog/solar-epc-financing.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-solar-panel"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Jan 20, 2026</div>
-                    <h3 class="blog-title">Financing Your Solar EPC Venture</h3>
-                    <p>Project reports and funding tips.</p>
-                </div>
-            </a>
-            <a href="/blog/ai-edtech-india.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-robot"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Jan 18, 2026</div>
-                    <h3 class="blog-title">AI in EdTech: ExamPrep.in Insights</h3>
-                    <p>Building scalable learning platforms.</p>
-                </div>
-            </a>
         </div>
     </section>
 
     <section id="contact" class="cta-section">
-        <h2>Looking for a Reliable One-Stop Business Partner?</h2>
-        <p>No obligation. Confidential discussion. Clear next steps.</p>
-        <a href="mailto:info@bcstax.in?subject=Free Consultation" class="btn">Book Free Consultation</a>
-        <a href="tel:+91-XXXXXXXXXX" class="btn" style="background: transparent; border: 2px solid #667eea; color: #667eea;">Talk to Advisor</a>
+        <h2 style="color: #1e3a8a;">Looking for a Reliable One-Stop Business Partner?</h2>
+        <p style="font-size: 1.2rem; color: #6b7280;">Bhatt Consultancy Services | No obligation. Confidential discussion. Clear next steps.</p>
+        <div class="contact-details">
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+919217126048">+91 92171 26048</a></p>
+                    <p><a href="tel:+918447454610">+91 84474 54610</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:bhattconsultancyservices.bcs@gmail.com">bhattconsultancyservices.bcs@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Us</h3>
+                    <p>Burāri, Delhi, India</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/91006921" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Bhattconsultancyservices" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/bhattconsultancyservices/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>BCS: Multi-disciplinary advisory delivering integrated solutions across strategy, finance, people, technology, and compliance. | Burāri, Delhi, India | &copy; 2026</p>
+        <p><strong>Bhatt Consultancy Services</strong> | Bold Consulting. Seamless Execution. | Multi-disciplinary advisory delivering integrated solutions across strategy, finance, people, technology, and compliance. | Burāri, Delhi, India | © 2026</p>
     </footer>
 
     <script>
