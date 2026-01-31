@@ -69,23 +69,37 @@
             .contact-grid { grid-template-columns: 1fr; }
             nav { flex-direction: column; padding: 1rem 2rem; }
         }
+        .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+.logo-link:hover .logo {
+    transform: scale(1.05);
+}
+.logo-link:hover .firm-name {
+    color: #ff6b6b !important;
+}
     </style>
 </head>
 <body>
     <header>
         <nav>
+            <a href="#home" class="logo-link">
             <div style="display: flex; align-items: center;">
                 <img src="Logo.jpg" alt="Bhatt Consultancy Services - BCS" class="logo">
                 <span class="firm-name">Bhatt Consultancy Services</span>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#why">Why BCS</a></li>
-                <li><a href="#how">How We Work</a></li>
-                <li><a href="#insights">Insights</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        </a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#why">Why BCS</a></li>
+            <li><a href="#how">How We Work</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
         </nav>
     </header>
 
