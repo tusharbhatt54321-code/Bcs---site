@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhatt Consultancy Services | One-Stop Business Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; scroll-behavior: smooth; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 2rem; }
+        nav a { color: white; text-decoration: none; transition: opacity 0.3s; }
+        nav a:hover { opacity: 0.8; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; padding: 150px 2rem 100px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .trust { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
+        .btn { background: #ff6b6b; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; margin: 0 1rem; transition: all 0.3s; }
+        .btn:hover { background: #ff5252; transform: translateY(-2px); }
+        section { padding: 80px 2rem; max-width: 1200px; margin: 0 auto; }
+        h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card i { font-size: 3rem; color: #667eea; margin-bottom: 1rem; }
+        .flow { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+        .step { flex: 1; min-width: 200px; text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 10px; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .cta-section { background: #f8f9fa; text-align: center; }
+        .cta-section h2 { margin-bottom: 1rem; }
+        .blog-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: box-shadow 0.3s; }
+        .blog-card:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+        .blog-img { height: 200px; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; }
+        .blog-content { padding: 1.5rem; }
+        .blog-date { color: #666; font-size: 0.9rem; }
+        .blog-title { font-size: 1.3rem; margin: 0.5rem 0; }
+        footer { background: #333; color: white; text-align: center; padding: 3rem 2rem 2rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } nav ul { flex-direction: column; gap: 1rem; } .flow { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2><i class="fas fa-briefcase"></i> BCS</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#why">Why BCS</a></li>
+                <li><a href="#how">How We Work</a></li>
+                <li><a href="#insights">Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Everything Your Business Needs. One Trusted Partner.</h1>
+        <p>Strategy, finance, compliance, technology, and manpower — delivered through a single, accountable advisory partner.</p>
+        <div class="trust">Serving startups, SMEs, and growing enterprises across India & global markets.</div>
+        <a href="#contact" class="btn">Schedule Free Consultation</a>
+        <a href="#solutions" class="btn" style="background: transparent; border: 2px solid white;">Explore Solutions</a>
+    </section>
+
+    <section id="solutions">
+        <h2>A Complete Business Solutions Ecosystem</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">BCS brings together advisory, execution, and ongoing support — so businesses don’t have to manage multiple vendors.</p>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Strategy & Growth</h3>
+                <p>Business planning, scaling & decision support.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-calculator"></i>
+                <h3>Tax, Accounting & Finance</h3>
+                <p>Compliance, reporting & CFO-level insights.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h3>People & Manpower</h3>
+                <p>Hiring, HR systems & workforce structuring.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Technology & Digital</h3>
+                <p>Websites, systems, automation & integrations.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Compliance & Risk</h3>
+                <p>Legal, regulatory & governance support.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cogs"></i>
+                <h3>Operations Excellence</h3>
+                <p>SOPs, cost optimization & efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" style="background: #f8f9fa;">
+        <h2 style="color: #333;">Why Businesses Choose BCS</h2>
+        <div class="why-grid">
+            <div class="card">
+                <i class="fas fa-user-check"></i>
+                <h3>One Point of Accountability</h3>
+                <p>No vendor coordination headaches.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Finance-Led Advisory</h3>
+                <p>Decisions backed by numbers.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Integrated Model</h3>
+                <p>Strategy + execution + compliance.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake"></i>
+                <h3>Scalable Partners</h3>
+                <p>Experts on demand, no overheads.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how">
+        <h2>Our Engagement Model</h2>
+        <div class="flow">
+            <div class="step"><i class="fas fa-search" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>1. Understand</h3><p>Diagnostic & needs assessment.</p></div>
+            <div class="step"><i class="fas fa-map" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>2. Design Roadmap</h3><p>Clear scope, timeline & ownership.</p></div>
+            <div class="step"><i class="fas fa-rocket" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>3. Execute</h3><p>In-house + vetted partners.</p></div>
+            <div class="step"><i class="fas fa-headset" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem; display: block;"></i><h3>4. Ongoing Support</h3><p>Continuous improvement.</p></div>
+        </div>
+    </section>
+
+    <section id="insights" style="background: #f8f9fa;">
+        <h2>Latest Insights & Blogs</h2>
+        <p style="text-align: center; margin-bottom: 3rem;">Stay ahead with expert articles on tax updates, startups, and business growth.</p>
+        <div class="grid">
+            <a href="/blog/gst-2026-updates.html" class="blog-card">
+                <div class="blog-img"><i class="fas fa-file-invoice"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">Jan 31, 2026</div>
+                    <h3 class="blog-title">GST Compliance Changes in 2026</h3>
+                    <p>New rules for SMEs and startups explained.</p>
+                </div>
+            </a>
+            <a href="/blog/startup-llp-formation.html" class="blog-card">
+                <div class="blog-img"><i class="fas fa-building"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">Jan 28, 2026</div>
+                    <h3 class="blog-title">LLP Formation Guide for Indian Startups</h3>
+                    <p>Step-by-step with MCA filings.</p>
+                </div>
+            </a>
+            <a href="/blog/xero-vs-tally.html" class="blog-card">
+                <div class="blog-img"><i class="fas fa-calculator"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">Jan 25, 2026</div>
+                    <h3 class="blog-title">Xero vs Tally: Best for Indian Businesses</h3>
+                    <p>Comparison for accounting efficiency.</p>
+                </div>
+            </a>
+            <a href="/blog/hr-manpower-outsourcing.html" class="blog-card">
+                <div class="blog-img"><i class="fas fa-users"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">Jan 22, 2026</div>
+                    <h3 class="blog-title">Manpower Solutions for Scaling Startups</h3>
+                    <p>HR outsourcing without the hassle.</p>
+                </div>
+            </a>
+            <a href="/blog/solar-epc-financing.html" class="blog-card">
+                <div class="blog-img"><i class="fas fa-solar-panel"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">Jan 20, 2026</div>
+                    <h3 class="blog-title">Financing Your Solar EPC Venture</h3>
+                    <p>Project reports and funding tips.</p>
+                </div>
+            </a>
+            <a href="/blog/ai-edtech-india.html" class="blog-card">
+                <div class="blog-img"><i class="fas fa-robot"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">Jan 18, 2026</div>
+                    <h3 class="blog-title">AI in EdTech: ExamPrep.in Insights</h3>
+                    <p>Building scalable learning platforms.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+        <h2>Looking for a Reliable One-Stop Business Partner?</h2>
+        <p>No obligation. Confidential discussion. Clear next steps.</p>
+        <a href="mailto:info@bcstax.in?subject=Free Consultation" class="btn">Book Free Consultation</a>
+        <a href="tel:+91-XXXXXXXXXX" class="btn" style="background: transparent; border: 2px solid #667eea; color: #667eea;">Talk to Advisor</a>
+    </section>
+
+    <footer>
+        <p>BCS: Multi-disciplinary advisory delivering integrated solutions across strategy, finance, people, technology, and compliance. | Burāri, Delhi, India | &copy; 2026</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
