@@ -62,6 +62,17 @@
         .blog-title { font-size: 1.4rem; margin: 1rem 0; color: #1e3a8a; }
         footer { background: #1e3a8a; color: white; text-align: center; padding: 3rem 2rem 2rem; }
         .hero-badge { background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: bold; margin-bottom: 2rem; display: inline-block; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .service-card { background: white; border-radius: 16px; padding: 2.5rem; border: 1px solid #e5e7eb; box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08); }
+        .service-card h3 { color: #1e3a8a; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .service-card p { color: #4b5563; margin-bottom: 1.5rem; }
+        .service-card ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+        .service-card li { display: flex; gap: 0.75rem; margin-bottom: 0.75rem; color: #374151; }
+        .service-card li i { color: #3b82f6; margin-top: 0.2rem; }
+        .price-box { background: #f8fafc; border-radius: 12px; padding: 1.25rem 1.5rem; border: 1px solid #e2e8f0; }
+        .price-box h4 { color: #1e3a8a; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .price-box p { margin: 0; color: #334155; font-weight: 600; }
+        .price-note { font-size: 0.95rem; color: #6b7280; margin-top: 1rem; }
         @media (max-width: 768px) { 
             .hero h1 { font-size: 2.5rem; } 
             nav ul { flex-direction: column; gap: 1rem; padding-top: 1rem; } 
@@ -95,6 +106,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#service-details">Service Details</a></li>
             <li><a href="#why">Why BCS</a></li>
             <li><a href="#how">How We Work</a></li>
             <li><a href="#insights">Insights</a></li>
@@ -145,6 +157,103 @@
                 <i class="fas fa-cogs"></i>
                 <h3>Operations Excellence</h3>
                 <p>SOPs, cost optimization & efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-details" style="background: #f8fafc;">
+        <h2>Service Details, Sub-Services & Pricing</h2>
+        <p style="text-align: center; max-width: 840px; margin: 0 auto 3rem; color: #6b7280; font-size: 1.1rem;">Explore each service area with clear inclusions, sub-service coverage, and transparent starting prices. Plans can be customized to business size and complexity.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Strategy & Growth</h3>
+                <p>Data-backed advisory to align vision, market opportunity, and execution.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Business plan & financial model</li>
+                    <li><i class="fas fa-check-circle"></i>Market research & competitor analysis</li>
+                    <li><i class="fas fa-check-circle"></i>Go-to-market & growth roadmap</li>
+                    <li><i class="fas fa-check-circle"></i>Pitch deck & investor readiness</li>
+                </ul>
+                <div class="price-box">
+                    <h4>Starting at</h4>
+                    <p>₹25,000 per engagement</p>
+                </div>
+                <div class="price-note">Includes a discovery workshop + roadmap report.</div>
+            </div>
+            <div class="service-card">
+                <h3>Tax, Accounting & Finance</h3>
+                <p>End-to-end compliance, reporting, and cash-flow visibility.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Monthly bookkeeping & MIS reports</li>
+                    <li><i class="fas fa-check-circle"></i>GST/TDS filing & reconciliations</li>
+                    <li><i class="fas fa-check-circle"></i>Year-end financials & audit support</li>
+                    <li><i class="fas fa-check-circle"></i>Virtual CFO & cash-flow planning</li>
+                </ul>
+                <div class="price-box">
+                    <h4>Starting at</h4>
+                    <p>₹12,000 per month</p>
+                </div>
+                <div class="price-note">Pricing scales by transaction volume and entity type.</div>
+            </div>
+            <div class="service-card">
+                <h3>People & Manpower</h3>
+                <p>Build teams with compliant hiring, payroll, and HR systems.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Recruitment & staffing support</li>
+                    <li><i class="fas fa-check-circle"></i>Payroll & statutory compliance</li>
+                    <li><i class="fas fa-check-circle"></i>HR policies & performance systems</li>
+                    <li><i class="fas fa-check-circle"></i>Training & manpower planning</li>
+                </ul>
+                <div class="price-box">
+                    <h4>Starting at</h4>
+                    <p>₹8,000 per hire / ₹15,000 monthly HR support</p>
+                </div>
+                <div class="price-note">Hybrid models available for growing teams.</div>
+            </div>
+            <div class="service-card">
+                <h3>Technology & Digital</h3>
+                <p>Digital-first execution to streamline operations and customer journeys.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Website & landing page development</li>
+                    <li><i class="fas fa-check-circle"></i>CRM/ERP selection & implementation</li>
+                    <li><i class="fas fa-check-circle"></i>Automation & workflow integration</li>
+                    <li><i class="fas fa-check-circle"></i>Analytics dashboards & reporting</li>
+                </ul>
+                <div class="price-box">
+                    <h4>Starting at</h4>
+                    <p>₹30,000 per project</p>
+                </div>
+                <div class="price-note">Flexible scope for MVPs to enterprise rollouts.</div>
+            </div>
+            <div class="service-card">
+                <h3>Compliance & Risk</h3>
+                <p>Regulatory coverage that keeps businesses protected and audit-ready.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Company incorporation & ROC filings</li>
+                    <li><i class="fas fa-check-circle"></i>Licenses, registrations & renewals</li>
+                    <li><i class="fas fa-check-circle"></i>Contracts, agreements & legal review</li>
+                    <li><i class="fas fa-check-circle"></i>Risk assessment & compliance calendar</li>
+                </ul>
+                <div class="price-box">
+                    <h4>Starting at</h4>
+                    <p>₹10,000 per filing / ₹20,000 monthly retainer</p>
+                </div>
+                <div class="price-note">Ongoing retainers include compliance tracking.</div>
+            </div>
+            <div class="service-card">
+                <h3>Operations Excellence</h3>
+                <p>Improve margins with process clarity, KPIs, and cost control.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i>Process mapping & SOP creation</li>
+                    <li><i class="fas fa-check-circle"></i>Cost optimization & vendor analysis</li>
+                    <li><i class="fas fa-check-circle"></i>Inventory & supply chain review</li>
+                    <li><i class="fas fa-check-circle"></i>Performance dashboards & KPIs</li>
+                </ul>
+                <div class="price-box">
+                    <h4>Starting at</h4>
+                    <p>₹22,000 per engagement</p>
+                </div>
+                <div class="price-note">Ideal for scaling businesses and multi-location teams.</div>
             </div>
         </div>
     </section>
