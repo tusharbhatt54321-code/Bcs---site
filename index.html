@@ -42,6 +42,8 @@
         .card { background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border: 1px solid #e5e7eb; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
         .card i { font-size: 3.5rem; color: #3b82f6; margin-bottom: 1rem; }
+        .solution-link { text-decoration: none; color: inherit; display: block; }
+        .solution-link:focus-visible { outline: 3px solid #93c5fd; outline-offset: 6px; border-radius: 16px; }
         .flow { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
         .step { flex: 1; min-width: 220px; text-align: center; padding: 2.5rem; background: #f8fafc; border-radius: 15px; border: 1px solid #e2e8f0; }
         .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
@@ -128,11 +130,13 @@
         <h2>A Complete Business Solutions Ecosystem</h2>
         <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: #6b7280; font-size: 1.1rem;">Bhatt Consultancy Services brings together advisory, execution, and ongoing support — so businesses don't have to manage multiple vendors.</p>
         <div class="grid">
-            <div class="card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Strategy & Growth</h3>
-                <p>Business planning, scaling & decision support.</p>
-            </div>
+            <a class="solution-link" href="strategy-growth.html">
+                <div class="card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Strategy & Growth</h3>
+                    <p>Business planning, scaling & decision support.</p>
+                </div>
+            </a>
             <div class="card">
                 <i class="fas fa-calculator"></i>
                 <h3>Tax, Accounting & Finance</h3>
