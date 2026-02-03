@@ -18,11 +18,11 @@
             z-index: 1000; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; flex-wrap: wrap; gap: 1rem; }
         .logo { height: 50px; width: auto; }
         .firm-name { font-size: 1.2rem; font-weight: bold; margin-left: 1rem; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 2rem; }
+        nav ul { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
+        nav ul li { margin-left: 0; }
         nav a { color: white; text-decoration: none; transition: opacity 0.3s; }
         nav a:hover { opacity: 0.8; }
         .hero { 
@@ -38,7 +38,7 @@
         .btn:hover { background: #dc2626; transform: translateY(-2px); }
         section { padding: 80px 2rem; max-width: 1200px; margin: 0 auto; }
         h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; color: #1e3a8a; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
         .card { background: white; padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; border: 1px solid #e5e7eb; }
         .card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
         .card i { font-size: 3.5rem; color: #3b82f6; margin-bottom: 1rem; }
@@ -64,7 +64,7 @@
         .blog-title { font-size: 1.4rem; margin: 1rem 0; color: #1e3a8a; }
         footer { background: #1e3a8a; color: white; text-align: center; padding: 3rem 2rem 2rem; }
         .hero-badge { background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: bold; margin-bottom: 2rem; display: inline-block; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
         .service-card { background: white; border-radius: 16px; padding: 2.5rem; border: 1px solid #e5e7eb; box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08); }
         .service-card h3 { color: #1e3a8a; font-size: 1.5rem; margin-bottom: 0.5rem; }
         .service-card p { color: #4b5563; margin-bottom: 1.5rem; }
@@ -76,11 +76,24 @@
         .price-box p { margin: 0; color: #334155; font-weight: 600; }
         .price-note { font-size: 0.95rem; color: #6b7280; margin-top: 1rem; }
         @media (max-width: 768px) { 
+            header { position: static; }
+            .hero { padding: 120px 1.5rem 80px; }
             .hero h1 { font-size: 2.5rem; } 
-            nav ul { flex-direction: column; gap: 1rem; padding-top: 1rem; } 
+            .hero p { font-size: 1.1rem; }
+            .btn { display: block; width: 100%; max-width: 320px; margin: 0.5rem auto; text-align: center; }
+            nav ul { flex-direction: column; gap: 0.75rem; padding-top: 0.5rem; width: 100%; align-items: center; }
             .flow { flex-direction: column; }
             .contact-grid { grid-template-columns: 1fr; }
-            nav { flex-direction: column; padding: 1rem 2rem; }
+            nav { flex-direction: column; padding: 1rem 1.5rem; }
+            .firm-name { font-size: 1.05rem; }
+        }
+        @media (max-width: 480px) {
+            section { padding: 60px 1.25rem; }
+            .hero h1 { font-size: 2.1rem; }
+            .hero-badge { font-size: 0.95rem; }
+            .card { padding: 2rem; }
+            .contact-details { padding: 2rem; }
+            .social-links { gap: 1rem; }
         }
         .logo-link {
     display: flex;
