@@ -20,7 +20,7 @@
         .hero { background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08); margin-bottom: 2.5rem; }
         .hero h1 { color: #1e3a8a; font-size: 2.8rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.1rem; color: #475569; }
-        .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
         .detail-card { background: #f1f5f9; border-radius: 16px; padding: 1.8rem; border: 1px solid #e2e8f0; }
         .detail-card i { color: #3b82f6; font-size: 2rem; margin-bottom: 1rem; }
         .detail-card h3 { color: #1e3a8a; margin-bottom: 0.5rem; }
@@ -37,9 +37,22 @@
         .btn.secondary { background: #1e3a8a; }
         footer { text-align: center; padding: 2rem; color: #64748b; }
         @media (max-width: 768px) {
+            nav { justify-content: center; padding: 0 1.5rem; }
+            .firm-name { font-size: 1.05rem; }
+            .logo { height: 44px; }
+            main { padding: 2.5rem 1.5rem 3.5rem; }
             .hero { padding: 2.2rem; }
             .hero h1 { font-size: 2.2rem; }
-            nav { justify-content: center; }
+            .section { padding: 2rem; }
+            .cta { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+        @media (max-width: 480px) {
+            nav { align-items: flex-start; }
+            .logo-link { flex-wrap: wrap; justify-content: center; width: 100%; }
+            .back-link { width: 100%; text-align: center; }
+            .hero { padding: 1.8rem; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
