@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations Excellence | Bhatt Consultancy Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #334155; background: #f8fafc; }
+        header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; flex-wrap: wrap; gap: 1rem; }
+        .logo { height: 50px; width: auto; }
+        .firm-name { font-size: 1.2rem; font-weight: bold; margin-left: 1rem; }
+        nav a { color: white; text-decoration: none; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; color: inherit; }
+        .back-link { background: rgba(255,255,255,0.15); padding: 0.6rem 1.2rem; border-radius: 999px; font-weight: 600; }
+        .back-link:hover { background: rgba(255,255,255,0.25); }
+        main { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+        .hero { background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08); margin-bottom: 2.5rem; }
+        .hero h1 { color: #1e3a8a; font-size: 2.8rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; color: #475569; }
+        .details-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .detail-card { background: #f1f5f9; border-radius: 16px; padding: 1.8rem; border: 1px solid #e2e8f0; }
+        .detail-card i { color: #3b82f6; font-size: 2rem; margin-bottom: 1rem; }
+        .detail-card h3 { color: #1e3a8a; margin-bottom: 0.5rem; }
+        .section { background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08); }
+        .section h2 { color: #1e3a8a; margin-bottom: 1.5rem; font-size: 2rem; }
+        .section ul { list-style: none; display: grid; gap: 1rem; }
+        .section li { display: flex; gap: 0.75rem; align-items: flex-start; }
+        .section li i { color: #22c55e; margin-top: 0.25rem; }
+        .price-box { margin-top: 2rem; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 14px; padding: 1.5rem; }
+        .price-box h4 { color: #1e3a8a; margin-bottom: 0.5rem; }
+        .price-box p { font-weight: 700; font-size: 1.1rem; color: #0f172a; }
+        .cta { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { background: #ef4444; color: white; padding: 0.9rem 1.6rem; text-decoration: none; border-radius: 10px; font-weight: bold; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn.secondary { background: #1e3a8a; }
+        footer { text-align: center; padding: 2rem; color: #64748b; }
+        @media (max-width: 768px) {
+            .hero { padding: 2.2rem; }
+            .hero h1 { font-size: 2.2rem; }
+            nav { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html#home" class="logo-link">
+                <img src="Logo.jpg" alt="Bhatt Consultancy Services" class="logo">
+                <span class="firm-name">Bhatt Consultancy Services</span>
+            </a>
+            <a href="index.html#solutions" class="back-link">Back to Solutions</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Operations Excellence</h1>
+            <p>Improve margins with process clarity, cost optimization, and performance tracking.</p>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Process Mapping</h3>
+                    <p>Document workflows and build SOPs for consistent execution.</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Cost Optimization</h3>
+                    <p>Identify savings and strengthen vendor and supply chain efficiency.</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h3>KPI Visibility</h3>
+                    <p>Dashboards and scorecards to track performance and accountability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What We Deliver</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i><span>Process mapping, SOP creation, and operational playbooks.</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Cost analysis and vendor optimization for stronger margins.</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Inventory and supply chain review with improvement plans.</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Performance dashboards and KPI reporting.</span></li>
+            </ul>
+
+            <div class="price-box">
+                <h4>Starting at</h4>
+                <p>₹22,000 per engagement</p>
+                <div>Ideal for scaling businesses and multi-location teams.</div>
+            </div>
+
+            <div class="cta">
+                <a href="index.html#contact" class="btn"><i class="fas fa-cogs"></i>Optimize Operations</a>
+                <a href="index.html#how" class="btn secondary"><i class="fas fa-map"></i>Engagement Model</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Bhatt Consultancy Services | Operational clarity that supports growth.</p>
+    </footer>
+</body>
+</html>
