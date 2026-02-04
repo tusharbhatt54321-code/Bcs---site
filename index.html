@@ -72,6 +72,7 @@
         .blog-date { color: #6b7280; font-size: 0.95rem; font-weight: 500; }
         .blog-title { font-size: 1.4rem; margin: 1rem 0; color: #1e3a8a; }
         .featured-insight { margin-bottom: 3rem; }
+        .featured-playlist { margin-top: 2rem; }
         .featured-card { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2.5rem; border-radius: 20px; text-decoration: none; color: white; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2); border: 1px solid rgba(255, 255, 255, 0.2); transition: transform 0.3s, box-shadow 0.3s; }
         .featured-card:hover { transform: translateY(-6px); box-shadow: 0 25px 55px rgba(15, 23, 42, 0.25); }
         .featured-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 600; background: rgba(255, 255, 255, 0.18); padding: 0.35rem 0.9rem; border-radius: 999px; }
@@ -370,41 +371,9 @@
                     <i class="fas fa-landmark"></i>
                 </div>
             </a>
+            <div class="grid featured-playlist" id="featured-series-list" aria-label="Union Budget 2026–27 featured posts"></div>
         </div>
-        <div class="grid">
-            <a href="/blog/union-budget-2026-27.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-chart-line"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Feb 01, 2026</div>
-                    <h3 class="blog-title">Union Budget 2026-27 | Key Highlights</h3>
-                    <p>Infrastructure push, MSME focus, and tax updates.</p>
-                </div>
-            </a>
-            <a href="/blog/gst-2026-updates.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-file-invoice"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Jan 31, 2026</div>
-                    <h3 class="blog-title">GST Compliance Changes in 2026</h3>
-                    <p>New rules for SMEs and startups explained.</p>
-                </div>
-            </a>
-            <a href="/blog/llp-formation-guide.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-building"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Jan 28, 2026</div>
-                    <h3 class="blog-title">LLP Formation Guide for Indian Startups</h3>
-                    <p>Step-by-step with MCA filings.</p>
-                </div>
-            </a>
-            <a href="/blog/xero-vs-tally.html" class="blog-card">
-                <div class="blog-img"><i class="fas fa-calculator"></i></div>
-                <div class="blog-content">
-                    <div class="blog-date">Jan 25, 2026</div>
-                    <h3 class="blog-title">Xero vs Tally: Best for Indian Businesses</h3>
-                    <p>Comparison for accounting efficiency.</p>
-                </div>
-            </a>
-        </div>
+        <div class="grid" id="insights-grid"></div>
     </section>
 
     <section id="contact" class="cta-section">
@@ -442,6 +411,70 @@
     </footer>
 
     <script>
+        const insightsPosts = [
+            {
+                title: 'Union Budget 2026-27 | Key Highlights',
+                href: '/blog/union-budget-2026-27.html',
+                dateLabel: 'Feb 05, 2026',
+                publishDate: '2026-02-05',
+                excerpt: 'Infrastructure push, MSME focus, and tax updates.',
+                icon: 'fas fa-chart-line',
+                tags: ['Union Budget 2026–27'],
+                featuredSeries: true
+            },
+            {
+                title: 'GST Compliance Changes in 2026',
+                href: '/blog/gst-2026-updates.html',
+                dateLabel: 'Jan 31, 2026',
+                publishDate: '2026-01-31',
+                excerpt: 'New rules for SMEs and startups explained.',
+                icon: 'fas fa-file-invoice',
+                tags: ['Compliance Updates']
+            },
+            {
+                title: 'LLP Formation Guide for Indian Startups',
+                href: '/blog/llp-formation-guide.html',
+                dateLabel: 'Jan 28, 2026',
+                publishDate: '2026-01-28',
+                excerpt: 'Step-by-step with MCA filings.',
+                icon: 'fas fa-building',
+                tags: ['Startup Guidance']
+            },
+            {
+                title: 'Xero vs Tally: Best for Indian Businesses',
+                href: '/blog/xero-vs-tally.html',
+                dateLabel: 'Jan 25, 2026',
+                publishDate: '2026-01-25',
+                excerpt: 'Comparison for accounting efficiency.',
+                icon: 'fas fa-calculator',
+                tags: ['Accounting Tools']
+            }
+        ];
+
+        const featuredSeriesTag = 'Union Budget 2026–27';
+        const featuredSeriesList = document.getElementById('featured-series-list');
+        const insightsGrid = document.getElementById('insights-grid');
+
+        const renderCard = (post) => `
+            <a href="${post.href}" class="blog-card">
+                <div class="blog-img"><i class="${post.icon}"></i></div>
+                <div class="blog-content">
+                    <div class="blog-date">${post.dateLabel}</div>
+                    <h3 class="blog-title">${post.title}</h3>
+                    <p>${post.excerpt}</p>
+                </div>
+            </a>
+        `;
+
+        const featuredPosts = insightsPosts
+            .filter((post) => post.tags.includes(featuredSeriesTag))
+            .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+
+        const regularPosts = insightsPosts.filter((post) => !post.tags.includes(featuredSeriesTag));
+
+        featuredSeriesList.innerHTML = featuredPosts.map(renderCard).join('');
+        insightsGrid.innerHTML = regularPosts.map(renderCard).join('');
+
         const menuToggle = document.querySelector('.menu-toggle');
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileLinks = mobileMenu.querySelectorAll('a');
