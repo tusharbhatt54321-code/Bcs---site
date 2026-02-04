@@ -446,15 +446,14 @@
     </footer>
 
     <script>
-        const insightsPosts = [
+        const featuredSeriesPosts = [
             {
                 title: 'Union Budget 2026–27 | Key Highlights',
                 href: '/insights/union-budget-2026-27/',
                 dateLabel: 'Feb 02, 2026',
                 publishDate: '2026-02-02',
                 excerpt: 'Top announcements, sector impacts, and early takeaways for business leaders.',
-                icon: 'fas fa-landmark',
-                tags: ['Union Budget 2026–27']
+                icon: 'fas fa-landmark'
             },
             {
                 title: 'Union Budget 2026–27: MSME & Startup Incentives',
@@ -462,8 +461,7 @@
                 dateLabel: 'Feb 03, 2026',
                 publishDate: '2026-02-03',
                 excerpt: 'Key benefits, eligibility notes, and immediate actions for founders.',
-                icon: 'fas fa-rocket',
-                tags: ['Union Budget 2026–27']
+                icon: 'fas fa-rocket'
             },
             {
                 title: 'Union Budget 2026–27: Tax & GST Updates',
@@ -471,8 +469,7 @@
                 dateLabel: 'Feb 04, 2026',
                 publishDate: '2026-02-04',
                 excerpt: 'Direct and indirect tax changes explained for finance teams.',
-                icon: 'fas fa-receipt',
-                tags: ['Union Budget 2026–27']
+                icon: 'fas fa-receipt'
             },
             {
                 title: 'Union Budget 2026–27: Compliance Roadmap',
@@ -480,9 +477,11 @@
                 dateLabel: 'Feb 05, 2026',
                 publishDate: '2026-02-05',
                 excerpt: 'Checklists, filing timelines, and documentation to stay audit-ready.',
-                icon: 'fas fa-clipboard-check',
-                tags: ['Union Budget 2026–27']
-            },
+                icon: 'fas fa-clipboard-check'
+            }
+        ];
+
+        const insightsPosts = [
             {
                 title: 'GST Compliance Changes in 2026',
                 href: '/blog/gst-2026-updates.html',
@@ -512,8 +511,6 @@
             }
         ];
 
-        const featuredSeriesTag = 'Union Budget 2026–27';
-        const featuredSeriesKeyword = 'Union Budget';
         const pinnedFeaturedTitle = 'Union Budget 2026–27 | Key Highlights';
         const featuredSeriesList = document.getElementById('featured-series-list');
         const insightsGrid = document.getElementById('insights-grid');
@@ -529,29 +526,15 @@
             </a>
         `;
 
-        const isFeaturedSeriesPost = (post) => {
-            const tags = post.tags ?? [];
-            const categories = post.categories ?? [];
-            const title = post.title ?? '';
-            return tags.includes(featuredSeriesTag)
-                || categories.includes(featuredSeriesTag)
-                || post.category === featuredSeriesTag
-                || title === pinnedFeaturedTitle
-                || title.includes(featuredSeriesKeyword);
-        };
-
-        const featuredPosts = insightsPosts
-            .filter(isFeaturedSeriesPost)
+        const featuredPosts = featuredSeriesPosts
             .sort((a, b) => {
                 if (a.title === pinnedFeaturedTitle) return -1;
                 if (b.title === pinnedFeaturedTitle) return 1;
                 return new Date(b.publishDate) - new Date(a.publishDate);
             });
 
-        const regularPosts = insightsPosts.filter((post) => !isFeaturedSeriesPost(post));
-
         featuredSeriesList.innerHTML = featuredPosts.map(renderCard).join('');
-        insightsGrid.innerHTML = regularPosts.map(renderCard).join('');
+        insightsGrid.innerHTML = insightsPosts.map(renderCard).join('');
 
         const menuToggle = document.querySelector('.menu-toggle');
         const mobileMenu = document.querySelector('.mobile-menu');
