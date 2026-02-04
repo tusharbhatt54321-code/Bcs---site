@@ -71,6 +71,14 @@
         .blog-content { padding: 2rem; }
         .blog-date { color: #6b7280; font-size: 0.95rem; font-weight: 500; }
         .blog-title { font-size: 1.4rem; margin: 1rem 0; color: #1e3a8a; }
+        .featured-insight { margin-bottom: 3rem; }
+        .featured-card { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 2.5rem; border-radius: 20px; text-decoration: none; color: white; background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2); border: 1px solid rgba(255, 255, 255, 0.2); transition: transform 0.3s, box-shadow 0.3s; }
+        .featured-card:hover { transform: translateY(-6px); box-shadow: 0 25px 55px rgba(15, 23, 42, 0.25); }
+        .featured-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 600; background: rgba(255, 255, 255, 0.18); padding: 0.35rem 0.9rem; border-radius: 999px; }
+        .featured-content h3 { font-size: 2rem; margin: 1rem 0 0.75rem; }
+        .featured-content p { font-size: 1.1rem; max-width: 520px; color: rgba(255, 255, 255, 0.9); }
+        .featured-cta { display: inline-block; margin-top: 1.5rem; font-weight: 700; }
+        .featured-icon { font-size: 4.2rem; opacity: 0.85; }
         footer { background: #1e3a8a; color: white; text-align: center; padding: 3rem 2rem 2rem; }
         .hero-badge { background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 1.1rem; font-weight: bold; margin-bottom: 2rem; display: inline-block; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
@@ -96,6 +104,8 @@
             .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
             .mobile-menu { display: block; }
             .flow { flex-direction: column; }
+            .featured-card { flex-direction: column; align-items: flex-start; text-align: left; }
+            .featured-icon { align-self: flex-end; }
             .contact-grid { grid-template-columns: 1fr; }
             nav { padding: 1rem 1.5rem; }
             .firm-name { font-size: 1.05rem; }
@@ -253,6 +263,19 @@
     <section id="insights" style="background: #f8fafc;">
         <h2>Bhatt Consultancy Services Insights</h2>
         <p style="text-align: center; margin-bottom: 3rem; color: #6b7280;">Stay ahead with expert articles on tax updates, startups, and business growth.</p>
+        <div class="featured-insight">
+            <a href="/insights/union-budget-2026-27/" class="featured-card">
+                <div class="featured-content">
+                    <span class="featured-tag"><i class="fas fa-star"></i>Featured Series</span>
+                    <h3>Union Budget 2026–27</h3>
+                    <p>Expert breakdowns on tax, GST, MSMEs, startups &amp; compliance impact.</p>
+                    <span class="featured-cta">Explore budget analysis →</span>
+                </div>
+                <div class="featured-icon" aria-hidden="true">
+                    <i class="fas fa-landmark"></i>
+                </div>
+            </a>
+        </div>
         <div class="grid">
             <a href="/blog/union-budget-2026-27.html" class="blog-card">
                 <div class="blog-img"><i class="fas fa-chart-line"></i></div>
