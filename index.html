@@ -19,8 +19,8 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; flex-wrap: wrap; gap: 1rem; }
-        .logo { height: 50px; width: auto; }
-        .firm-name { font-size: 1.2rem; font-weight: bold; margin-left: 1rem; }
+        .logo { height: 64px; width: auto; }
+        .firm-name { font-size: 1.25rem; font-weight: bold; margin-left: 0; line-height: 1.1; }
         .nav-actions { display: flex; align-items: center; gap: 1.5rem; position: relative; }
         .nav-links { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
         .nav-links li { margin-left: 0; }
@@ -137,6 +137,7 @@
             .contact-grid { grid-template-columns: 1fr; }
             nav { padding: 1rem 1.5rem; }
             .firm-name { font-size: 1.05rem; }
+            .logo { height: 52px; }
             .industries-grid { grid-template-columns: 1fr; }
             .testimonial-slide { padding: 0; }
         }
@@ -153,6 +154,11 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
+}
+        .logo-link > div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 .logo-link:hover .logo {
     transform: scale(1.05);
