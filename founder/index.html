@@ -26,9 +26,9 @@
         .back-link:hover { background: rgba(255,255,255,0.25); }
         main { max-width: 1150px; margin: 0 auto; padding: 3.5rem 2rem 4.5rem; }
         .founder-hero { background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08); display: grid; grid-template-columns: minmax(280px, 0.95fr) minmax(320px, 1.05fr); gap: 3rem; align-items: center; }
-        .founder-image-wrap { height: 420px; border-radius: 22px; border: 1px solid #e2e8f0; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12); overflow: hidden; position: relative; background: linear-gradient(180deg, #0f172a 0%, #020617 100%); }
+        .founder-image-wrap { height: 420px; border-radius: 22px; border: 1px solid #e2e8f0; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12); overflow: hidden; position: relative; background: linear-gradient(180deg, #0f172a 0%, #020617 80%); }
         .founder-image-wrap::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 40px rgba(0,0,0,0.25); pointer-events: none; }
-        .founder-image { border-radius: 22px; height: 100%; width: 100%; display: block; object-fit: cover; object-position: center top; position: relative; z-index: 1; }
+        .founder-image { border-radius: 22px; height: 100%; width: 100%; display: block; object-fit: cover; object-position: center 20%; position: relative; z-index: 1; }
         .founder-content h1 { color: #1e3a8a; font-size: 2.6rem; margin-bottom: 1rem; }
         .founder-content p { color: #475569; font-size: 1.05rem; margin-bottom: 1.4rem; }
         .founder-identity { margin-top: 1.2rem; font-weight: 600; color: #0f172a; }
@@ -85,9 +85,19 @@
                 <h1>Founder-Led Business &amp; Financial Advisory Built for Growing Businesses</h1>
                 <p>Helping startups, SMEs, and professionals make confident decisions across strategy, finance, compliance, and growth — with a single accountable advisory partner.</p>
                 <div class="founder-identity">
+                    .founder-meta {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.35rem;
+  display: block;
+  font-weight: 500;
+}
                     <span>Tushar Bhatt</span>
                     <span>Founder &amp; Principal Consultant</span>
                     <span>Bhatt Consultancy Services (BCS)</span>
+                    <span class="founder-meta">
+    7+ years • GST Practitioner • Xero &amp; QuickBooks Certified
+  </span>
                 </div>
                 <a class="linkedin-link" href="https://www.linkedin.com/in/tushar-bhatt-b98545205" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
