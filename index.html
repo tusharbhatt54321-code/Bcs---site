@@ -21,10 +21,19 @@
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; flex-wrap: wrap; gap: 1rem; }
         .logo { height: 50px; width: auto; }
         .firm-name { font-size: 1.2rem; font-weight: bold; margin-left: 1rem; }
-        nav ul { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
-        nav ul li { margin-left: 0; }
+        .nav-actions { display: flex; align-items: center; gap: 1.5rem; position: relative; }
+        .nav-links { display: flex; list-style: none; gap: 1.5rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links li { margin-left: 0; }
         nav a { color: white; text-decoration: none; transition: opacity 0.3s; }
         nav a:hover { opacity: 0.8; }
+        .menu-toggle { display: none; background: transparent; border: 1px solid transparent; color: white; font-size: 1.6rem; cursor: pointer; padding: 0.35rem 0.6rem; border-radius: 8px; line-height: 1; }
+        .menu-toggle:focus-visible { outline: 2px solid white; outline-offset: 2px; }
+        .mobile-menu { display: none; position: absolute; right: 0; top: calc(100% + 0.6rem); background: white; border-radius: 12px; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18); min-width: 200px; padding: 0.5rem 0; opacity: 0; transform: translateY(-10px); pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; }
+        .mobile-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .mobile-menu a { color: #1f2937; display: block; padding: 0.65rem 1rem; text-decoration: none; }
+        .mobile-menu a:hover,
+        .mobile-menu a:focus-visible { background: #f1f5f9; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
         .hero { 
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); 
             color: white; 
@@ -81,10 +90,14 @@
             .hero h1 { font-size: 2.5rem; } 
             .hero p { font-size: 1.1rem; }
             .btn { display: block; width: 100%; max-width: 320px; margin: 0.5rem auto; text-align: center; }
-            nav ul { flex-direction: column; gap: 0.75rem; padding-top: 0.5rem; width: 100%; align-items: center; }
+            nav { flex-direction: row; align-items: center; }
+            .nav-actions { margin-left: auto; }
+            .nav-links { display: none; }
+            .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+            .mobile-menu { display: block; }
             .flow { flex-direction: column; }
             .contact-grid { grid-template-columns: 1fr; }
-            nav { flex-direction: column; padding: 1rem 1.5rem; }
+            nav { padding: 1rem 1.5rem; }
             .firm-name { font-size: 1.05rem; }
         }
         @media (max-width: 480px) {
@@ -113,19 +126,33 @@
     <header>
         <nav>
             <a href="#home" class="logo-link">
-            <div style="display: flex; align-items: center;">
-                <img src="Logo.jpg" alt="Bhatt Consultancy Services - BCS" class="logo">
-                <span class="firm-name">Bhatt Consultancy Services</span>
+                <div style="display: flex; align-items: center;">
+                    <img src="Logo.jpg" alt="Bhatt Consultancy Services - BCS" class="logo">
+                    <span class="firm-name">Bhatt Consultancy Services</span>
+                </div>
+            </a>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#why">Why BCS</a></li>
+                    <li><a href="#how">How We Work</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    ⋮
+                </button>
+                <div class="mobile-menu" id="mobile-menu" role="menu">
+                    <a role="menuitem" href="#home">Home</a>
+                    <a role="menuitem" href="#solutions">Solutions</a>
+                    <a role="menuitem" href="#why">Why BCS</a>
+                    <a role="menuitem" href="#how">How We Work</a>
+                    <a role="menuitem" href="#insights">Insights</a>
+                    <a role="menuitem" href="#contact">Contact</a>
+                </div>
             </div>
-        </a>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#why">Why BCS</a></li>
-            <li><a href="#how">How We Work</a></li>
-            <li><a href="#insights">Insights</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
         </nav>
     </header>
 
@@ -296,6 +323,38 @@
         <p><strong>Bhatt Consultancy Services</strong> | Bold Consulting. Seamless Execution. | Multi-disciplinary advisory delivering integrated solutions across strategy, finance, people, technology, and compliance. | House No 1, A-1 Block,<br>Police Colony, Burari, Delhi 110084<br>Near Burari Police Station | © 2026</p>
     </footer>
 
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        mobileLinks.forEach((link) => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMenu();
+                menuToggle.blur();
+            }
+        });
+    </script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
