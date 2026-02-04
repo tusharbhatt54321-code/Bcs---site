@@ -18,16 +18,15 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; flex-wrap: wrap; gap: 1rem; }
-        .logo { height: 50px; width: auto; }
-        .firm-name { font-size: 1.2rem; font-weight: bold; margin-left: 1rem; }
+        .logo { height: 64px; width: auto; }
+        .firm-name { font-size: 1.25rem; font-weight: bold; margin-left: 0; line-height: 1.1; }
         nav a { color: white; text-decoration: none; }
-        .logo-link { display: flex; align-items: center; text-decoration: none; color: inherit; }
+        .logo-link { display: flex; align-items: center; text-decoration: none; color: inherit; gap: 0.75rem; }
         .back-link { background: rgba(255,255,255,0.15); padding: 0.6rem 1.2rem; border-radius: 999px; font-weight: 600; }
         .back-link:hover { background: rgba(255,255,255,0.25); }
         main { max-width: 1150px; margin: 0 auto; padding: 3.5rem 2rem 4.5rem; }
         .founder-hero { background: white; border-radius: 24px; padding: 3rem; box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08); display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; align-items: center; }
-        .founder-image-wrap { width: 100%; height: 380px; max-height: 420px; display: flex; align-items: center; justify-content: center; overflow: visible; position: relative; z-index: 1; }
-        .founder-image { width: 100%; height: 100%; max-height: 420px; border-radius: 20px; border: 1px solid #e2e8f0; display: block; object-fit: cover; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12); }
+        .founder-image { border-radius: 20px; height: 340px; border: 1px solid #e2e8f0; display: block; width: 100%; object-fit: cover; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12); }
         .founder-content h1 { color: #1e3a8a; font-size: 2.6rem; margin-bottom: 1rem; }
         .founder-content p { color: #475569; font-size: 1.05rem; margin-bottom: 1.4rem; }
         .founder-identity { margin-top: 1.2rem; font-weight: 600; color: #0f172a; }
@@ -48,7 +47,7 @@
         @media (max-width: 768px) {
             nav { justify-content: center; padding: 0 1.5rem; }
             .firm-name { font-size: 1.05rem; }
-            .logo { height: 44px; }
+            .logo { height: 52px; }
             main { padding: 2.8rem 1.5rem 3.8rem; }
             .founder-hero { padding: 2.2rem; }
             .founder-content h1 { font-size: 2.2rem; }
@@ -67,7 +66,7 @@
     <header>
         <nav>
             <a href="/" class="logo-link">
-                <img src="/logo.png" alt="Bhatt Consultancy Services" class="logo">
+                <img src="/bcs-logo-white-transparent.png" alt="Bhatt Consultancy Services" class="logo">
                 <span class="firm-name">Bhatt Consultancy Services</span>
             </a>
             <a href="/" class="back-link">Back to Home</a>
@@ -76,9 +75,7 @@
 
     <main>
         <section class="founder-hero">
-            <div class="founder-image-wrap">
-                <img class="founder-image" src="https://www.bcstax.in/founder/tushar-bhatt-founder-bhatt-consultancy-services.jpg" alt="Tushar Bhatt, Founder of Bhatt Consultancy Services">
-            </div>
+            <img class="founder-image" src="tushar-bhatt-founder-bhatt-consultancy-services.jpg" alt="Tushar Bhatt, Founder of Bhatt Consultancy Services">
             <div class="founder-content">
                 <h1>Founder-Led Business &amp; Financial Advisory Built for Growing Businesses</h1>
                 <p>Helping startups, SMEs, and professionals make confident decisions across strategy, finance, compliance, and growth — with a single accountable advisory partner.</p>
@@ -110,7 +107,7 @@
                 <div class="credential-card"><i class="fas fa-check-circle"></i><span>Registered GST Practitioner</span></div>
                 <div class="credential-card"><i class="fas fa-check-circle"></i><span>Expertise in Business Strategy with a strong focus on Financial Strategy</span></div>
                 <div class="credential-card"><i class="fas fa-check-circle"></i><span>Served clients across India &amp; select global markets</span></div>
-                <div class="credential-card"><i class="fas fa-check-circle"></i><span>Rated 4.8★ across LinkedIn &amp; freelance platforms</span></div>
+                <div class="credential-card"><i class="fas fa-check-circle"></i><span>Rated 5★ across LinkedIn &amp; freelance platforms</span></div>
                 <div class="credential-card"><i class="fas fa-check-circle"></i><span>Trusted by startups, SMEs &amp; professionals</span></div>
             </div>
         </section>
