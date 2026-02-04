@@ -512,6 +512,7 @@
         ];
 
         const featuredSeriesTag = 'Union Budget 2026–27';
+        const pinnedFeaturedTitle = 'Union Budget 2026–27 | Key Highlights';
         const featuredSeriesList = document.getElementById('featured-series-list');
         const insightsGrid = document.getElementById('insights-grid');
 
@@ -526,11 +527,24 @@
             </a>
         `;
 
-        const featuredPosts = insightsPosts
-            .filter((post) => post.tags.includes(featuredSeriesTag))
-            .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+        const isFeaturedSeriesPost = (post) => {
+            const tags = post.tags ?? [];
+            const categories = post.categories ?? [];
+            return tags.includes(featuredSeriesTag)
+                || categories.includes(featuredSeriesTag)
+                || post.category === featuredSeriesTag
+                || post.title === pinnedFeaturedTitle;
+        };
 
-        const regularPosts = insightsPosts.filter((post) => !post.tags.includes(featuredSeriesTag));
+        const featuredPosts = insightsPosts
+            .filter(isFeaturedSeriesPost)
+            .sort((a, b) => {
+                if (a.title === pinnedFeaturedTitle) return -1;
+                if (b.title === pinnedFeaturedTitle) return 1;
+                return new Date(b.publishDate) - new Date(a.publishDate);
+            });
+
+        const regularPosts = insightsPosts.filter((post) => !isFeaturedSeriesPost(post));
 
         featuredSeriesList.innerHTML = featuredPosts.map(renderCard).join('');
         insightsGrid.innerHTML = regularPosts.map(renderCard).join('');
