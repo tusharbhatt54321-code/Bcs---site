@@ -113,6 +113,13 @@
         .testimonial-dots { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
         .testimonial-dot { width: 10px; height: 10px; border-radius: 50%; background: #cbd5f5; border: none; cursor: pointer; }
         .testimonial-dot.active { background: #3b82f6; }
+        .why-founder { margin-top: 2.5rem; background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08); border: 1px solid #e2e8f0; max-width: 920px; margin-left: auto; margin-right: auto; text-align: center; }
+        .why-founder h3 { color: #1e3a8a; font-size: 1.6rem; margin-bottom: 1rem; }
+        .why-founder p { color: #475569; font-size: 1.05rem; }
+        .founder-cta { background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%); text-align: center; }
+        .founder-cta .cta-card { background: white; border-radius: 18px; padding: 2.5rem; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12); border: 1px solid #e2e8f0; max-width: 900px; margin: 0 auto; }
+        .founder-cta h2 { margin-bottom: 1.5rem; }
+        .founder-cta p { font-size: 1.1rem; color: #475569; margin-bottom: 2rem; }
         @media (max-width: 768px) { 
             header { position: static; }
             .hero { padding: 120px 1.5rem 80px; }
@@ -191,11 +198,11 @@
 
     <section id="home" class="hero">
         <div class="hero-badge">BHATT CONSULTANCY SERVICES</div>
-        <h1>Everything Your Business Needs. One Trusted Partner.</h1>
-        <p>Strategy, finance, compliance, technology, and manpower — delivered through a single, accountable advisory partner.</p>
+        <h1>Founder-Led Business &amp; Financial Advisory for Growing Enterprises</h1>
+        <p>Led by Tushar Bhatt, Bhatt Consultancy Services helps startups, SMEs, and professionals manage strategy, finance, compliance, and growth — through one accountable advisory partner.</p>
         <div class="trust">Serving startups, SMEs, and growing enterprises across India & global markets.</div>
         <a href="#contact" class="btn">Schedule Free Consultation</a>
-        <a href="#solutions" class="btn" style="background: transparent; border: 2px solid white;">Explore Solutions</a>
+        <a href="/founder" class="btn" style="background: transparent; border: 2px solid white;">Meet the Founder →</a>
     </section>
 
     <section id="solutions">
@@ -290,6 +297,45 @@
         </div>
     </section>
 
+    <section id="why" style="background: #f8fafc;">
+        <h2>Why Businesses Choose Bhatt Consultancy Services</h2>
+        <div class="why-grid">
+            <div class="card">
+                <i class="fas fa-user-check"></i>
+                <h3>One Point of Accountability</h3>
+                <p>No vendor coordination headaches.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Finance-Led Advisory</h3>
+                <p>Decisions backed by numbers.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Integrated Model</h3>
+                <p>Strategy + execution + compliance.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-handshake"></i>
+                <h3>Scalable Partners</h3>
+                <p>Experts on demand, no overheads.</p>
+            </div>
+        </div>
+        <div class="why-founder">
+            <h3>Founder-Led. Strategy-Driven. Execution-Focused.</h3>
+            <p>Bhatt Consultancy Services operates on a founder-led advisory model to ensure businesses receive not just advice, but accountable execution.</p>
+            <p>By integrating strategy, finance, compliance, technology, and operations into a single business solutions ecosystem, BCS helps clients reduce complexity, manage risk, and scale with confidence.</p>
+        </div>
+    </section>
+
+    <section class="founder-cta">
+        <div class="cta-card">
+            <h2>A Founder-Led Consulting Approach</h2>
+            <p>Bhatt Consultancy Services is led by its founder, ensuring every client engagement benefits from experience, accountability, and strategic clarity — not just execution.</p>
+            <a href="/founder" class="btn">Meet the Founder →</a>
+        </div>
+    </section>
+
     <section id="testimonials" class="testimonial-section">
         <h2>What Clients Say About BCS</h2>
         <p class="section-intro">Real feedback shared by clients on freelance platforms and LinkedIn.</p>
@@ -340,7 +386,7 @@
                         <div class="testimonial-image-wrap">
                             <img class="testimonial-image" src="upwork-review-firm-registration-bcs.jpg" alt="Upwork client review for firm registration">
                         </div>
-                        <div class="testimonial-label"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Upwork Client Review</span></div>
+                        <div class="testimonial-label"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Client feedback via Upwork</span></div>
                     </div>
                 </article>
             </div>
@@ -352,32 +398,6 @@
             <button class="testimonial-dot" type="button" aria-label="Show testimonial 4"></button>
             <button class="testimonial-dot" type="button" aria-label="Show testimonial 5"></button>
             <button class="testimonial-dot" type="button" aria-label="Show testimonial 6"></button>
-        </div>
-    </section>
-
-    <section id="why" style="background: #f8fafc;">
-        <h2>Why Businesses Choose Bhatt Consultancy Services</h2>
-        <div class="why-grid">
-            <div class="card">
-                <i class="fas fa-user-check"></i>
-                <h3>One Point of Accountability</h3>
-                <p>No vendor coordination headaches.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Finance-Led Advisory</h3>
-                <p>Decisions backed by numbers.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Integrated Model</h3>
-                <p>Strategy + execution + compliance.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-handshake"></i>
-                <h3>Scalable Partners</h3>
-                <p>Experts on demand, no overheads.</p>
-            </div>
         </div>
     </section>
 
