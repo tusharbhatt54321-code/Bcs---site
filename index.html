@@ -502,6 +502,7 @@
         ];
 
         const featuredSeriesTag = 'Union Budget 2026–27';
+        const featuredSeriesKeyword = 'Union Budget';
         const pinnedFeaturedTitle = 'Union Budget 2026–27 | Key Highlights';
         const featuredSeriesList = document.getElementById('featured-series-list');
         const insightsGrid = document.getElementById('insights-grid');
@@ -520,10 +521,12 @@
         const isFeaturedSeriesPost = (post) => {
             const tags = post.tags ?? [];
             const categories = post.categories ?? [];
+            const title = post.title ?? '';
             return tags.includes(featuredSeriesTag)
                 || categories.includes(featuredSeriesTag)
                 || post.category === featuredSeriesTag
-                || post.title === pinnedFeaturedTitle;
+                || title === pinnedFeaturedTitle
+                || title.includes(featuredSeriesKeyword);
         };
 
         const featuredPosts = insightsPosts
