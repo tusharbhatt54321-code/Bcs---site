@@ -107,9 +107,9 @@
         .testimonial-slide { min-width: 100%; padding: 0 1rem; }
         .testimonial-card { background: white; border-radius: 18px; padding: 2rem; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12); border: 1px solid #e2e8f0; text-align: center; }
         .testimonial-image-wrap { width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; background: #e5e7eb; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .testimonial-image { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .testimonial-label { margin-top: 1.25rem; font-weight: 600; color: #6b7280; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.95rem; }
-        .testimonial-label i { color: #94a3b8; }
+        .testimonial-image { width: 100%; height: 100%; object-fit: contain; display: block; }
+        .testimonial-label { margin-top: 8px; font-weight: 600; color: #6b7280; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem; font-size: 0.85rem; text-align: center; }
+        .testimonial-label i { color: #94a3b8; font-size: 0.9rem; }
         .testimonial-dots { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
         .testimonial-dot { width: 10px; height: 10px; border-radius: 50%; background: #cbd5f5; border: none; cursor: pointer; }
         .testimonial-dot.active { background: #3b82f6; }
@@ -298,7 +298,7 @@
                 <article class="testimonial-slide">
                     <div class="testimonial-card">
                         <div class="testimonial-image-wrap">
-                            <img class="testimonial-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3C/svg%3E" alt="Client testimonial screenshot – to be added">
+                            <img class="testimonial-image" src="linkedin-review-pankaj-joshi-bcs.jpg" alt="LinkedIn review from Pankaj Joshi">
                         </div>
                         <div class="testimonial-label"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>Reviewed on LinkedIn</span></div>
                     </div>
@@ -306,7 +306,23 @@
                 <article class="testimonial-slide">
                     <div class="testimonial-card">
                         <div class="testimonial-image-wrap">
-                            <img class="testimonial-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3C/svg%3E" alt="Client testimonial screenshot – to be added">
+                            <img class="testimonial-image" src="linkedin-review-kartik-gupta-bcs.jpg" alt="LinkedIn review from Kartik Gupta">
+                        </div>
+                        <div class="testimonial-label"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>Reviewed on LinkedIn</span></div>
+                    </div>
+                </article>
+                <article class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image-wrap">
+                            <img class="testimonial-image" src="linkedin-review-mamta-joshi-bcs.jpg" alt="LinkedIn review from Mamta Joshi">
+                        </div>
+                        <div class="testimonial-label"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>Reviewed on LinkedIn</span></div>
+                    </div>
+                </article>
+                <article class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image-wrap">
+                            <img class="testimonial-image" src="truelancer-review-income-tax-services-bcs.jpg" alt="Truelancer client feedback for income tax services">
                         </div>
                         <div class="testimonial-label"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Client feedback via Truelancer</span></div>
                     </div>
@@ -314,9 +330,17 @@
                 <article class="testimonial-slide">
                     <div class="testimonial-card">
                         <div class="testimonial-image-wrap">
-                            <img class="testimonial-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3C/svg%3E" alt="Client testimonial screenshot – to be added">
+                            <img class="testimonial-image" src="fiverr-review-gst-company-registration-bcs.jpg" alt="Fiverr client feedback for GST company registration">
                         </div>
-                        <div class="testimonial-label"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>Reviewed on LinkedIn</span></div>
+                        <div class="testimonial-label"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Client feedback via Fiverr</span></div>
+                    </div>
+                </article>
+                <article class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-image-wrap">
+                            <img class="testimonial-image" src="upwork-review-firm-registration-bcs.jpg" alt="Upwork client review for firm registration">
+                        </div>
+                        <div class="testimonial-label"><i class="fa-solid fa-globe" aria-hidden="true"></i><span>Upwork Client Review</span></div>
                     </div>
                 </article>
             </div>
@@ -325,6 +349,9 @@
             <button class="testimonial-dot active" type="button" aria-label="Show testimonial 1"></button>
             <button class="testimonial-dot" type="button" aria-label="Show testimonial 2"></button>
             <button class="testimonial-dot" type="button" aria-label="Show testimonial 3"></button>
+            <button class="testimonial-dot" type="button" aria-label="Show testimonial 4"></button>
+            <button class="testimonial-dot" type="button" aria-label="Show testimonial 5"></button>
+            <button class="testimonial-dot" type="button" aria-label="Show testimonial 6"></button>
         </div>
     </section>
 
