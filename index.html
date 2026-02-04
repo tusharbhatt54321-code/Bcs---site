@@ -92,6 +92,24 @@
         .price-box h4 { color: #1e3a8a; margin-bottom: 0.5rem; font-size: 1.1rem; }
         .price-box p { margin: 0; color: #334155; font-weight: 600; }
         .price-note { font-size: 0.95rem; color: #6b7280; margin-top: 1rem; }
+        .section-intro { text-align: center; max-width: 760px; margin: 0 auto 3rem; color: #6b7280; font-size: 1.1rem; }
+        .industries-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+        .industry-card { background: white; border-radius: 16px; border: 1px solid #e5e7eb; padding: 2.5rem 2rem; text-align: center; box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08); }
+        .industry-card i { font-size: 2.8rem; color: #3b82f6; margin-bottom: 1rem; }
+        .industry-card h3 { font-size: 1.25rem; color: #1e3a8a; }
+        .markets-wrap { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+        .market-pill { background: #f1f5f9; color: #1e3a8a; padding: 0.6rem 1.2rem; border-radius: 999px; font-weight: 600; border: 1px solid #e2e8f0; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08); display: inline-flex; align-items: center; gap: 0.5rem; }
+        .market-pill i { color: #3b82f6; }
+        .testimonial-section { background: #f8fafc; }
+        .testimonial-slider { position: relative; overflow: hidden; max-width: 820px; margin: 0 auto; }
+        .testimonial-track { display: flex; transition: transform 0.6s ease; }
+        .testimonial-slide { min-width: 100%; padding: 0 1rem; }
+        .testimonial-card { background: white; border-radius: 18px; padding: 2rem; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12); border: 1px solid #e2e8f0; text-align: center; }
+        .testimonial-image { width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; background: #e5e7eb; display: block; border: 1px solid #e2e8f0; }
+        .testimonial-label { margin-top: 1.25rem; font-weight: 600; color: #1e3a8a; }
+        .testimonial-dots { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1.5rem; }
+        .testimonial-dot { width: 10px; height: 10px; border-radius: 50%; background: #cbd5f5; border: none; cursor: pointer; }
+        .testimonial-dot.active { background: #3b82f6; }
         @media (max-width: 768px) { 
             header { position: static; }
             .hero { padding: 120px 1.5rem 80px; }
@@ -109,6 +127,8 @@
             .contact-grid { grid-template-columns: 1fr; }
             nav { padding: 1rem 1.5rem; }
             .firm-name { font-size: 1.05rem; }
+            .industries-grid { grid-template-columns: 1fr; }
+            .testimonial-slide { padding: 0; }
         }
         @media (max-width: 480px) {
             section { padding: 60px 1.25rem; }
@@ -221,6 +241,81 @@
                     <p>SOPs, cost optimization & efficiency.</p>
                 </div>
             </a>
+        </div>
+    </section>
+
+    <section id="industries">
+        <h2>Industries We Serve</h2>
+        <p class="section-intro">Supporting businesses across diverse industries with tax, compliance, and strategic advisory services.</p>
+        <div class="industries-grid">
+            <article class="industry-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Startups</h3>
+            </article>
+            <article class="industry-card">
+                <i class="fas fa-building"></i>
+                <h3>Small &amp; Medium Enterprises (SMEs)</h3>
+            </article>
+            <article class="industry-card">
+                <i class="fas fa-store"></i>
+                <h3>E-commerce &amp; Online Businesses</h3>
+            </article>
+            <article class="industry-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>IT &amp; SaaS Companies</h3>
+            </article>
+            <article class="industry-card">
+                <i class="fas fa-industry"></i>
+                <h3>Manufacturing &amp; Trading</h3>
+            </article>
+            <article class="industry-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Professionals &amp; Service Providers</h3>
+            </article>
+        </div>
+    </section>
+
+    <section id="markets" style="background: #f8fafc;">
+        <h2>Markets We Serve</h2>
+        <p class="section-intro">Serving clients across India and select global markets.</p>
+        <div class="markets-wrap">
+            <span class="market-pill"><i class="fas fa-map-marker-alt"></i>India</span>
+            <span class="market-pill"><i class="fas fa-globe"></i>United Arab Emirates (UAE)</span>
+            <span class="market-pill"><i class="fas fa-globe"></i>United States</span>
+            <span class="market-pill"><i class="fas fa-globe"></i>United Kingdom</span>
+            <span class="market-pill"><i class="fas fa-globe"></i>Singapore</span>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonial-section">
+        <h2>What Clients Say About BCS</h2>
+        <p class="section-intro">Real feedback shared by clients on freelance platforms and LinkedIn.</p>
+        <div class="testimonial-slider" aria-live="polite">
+            <div class="testimonial-track">
+                <article class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <img class="testimonial-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='28' text-anchor='middle' dy='.3em'%3ETwitter%20Placeholder%3C/text%3E%3C/svg%3E" alt="Client testimonial screenshot – to be added">
+                        <div class="testimonial-label">Reviewed on Freelancer</div>
+                    </div>
+                </article>
+                <article class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <img class="testimonial-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='28' text-anchor='middle' dy='.3em'%3ETwitter%20Placeholder%3C/text%3E%3C/svg%3E" alt="Client testimonial screenshot – to be added">
+                        <div class="testimonial-label">Shared on LinkedIn</div>
+                    </div>
+                </article>
+                <article class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <img class="testimonial-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Crect width='100%25' height='100%25' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' fill='%2394a3b8' font-size='28' text-anchor='middle' dy='.3em'%3ETwitter%20Placeholder%3C/text%3E%3C/svg%3E" alt="Client testimonial screenshot – to be added">
+                        <div class="testimonial-label">Reviewed on Freelancer</div>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="testimonial-dots" role="tablist" aria-label="Testimonial navigation">
+            <button class="testimonial-dot active" type="button" aria-label="Show testimonial 1"></button>
+            <button class="testimonial-dot" type="button" aria-label="Show testimonial 2"></button>
+            <button class="testimonial-dot" type="button" aria-label="Show testimonial 3"></button>
         </div>
     </section>
 
@@ -377,6 +472,66 @@
                 menuToggle.blur();
             }
         });
+    </script>
+    <script>
+        const testimonialSection = document.querySelector('#testimonials');
+
+        if (testimonialSection) {
+            const track = testimonialSection.querySelector('.testimonial-track');
+            const slides = Array.from(testimonialSection.querySelectorAll('.testimonial-slide'));
+            const dots = Array.from(testimonialSection.querySelectorAll('.testimonial-dot'));
+            const slider = testimonialSection.querySelector('.testimonial-slider');
+            let currentIndex = 0;
+            let autoSlideTimer;
+
+            const updateSlide = (index) => {
+                currentIndex = (index + slides.length) % slides.length;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle('active', dotIndex === currentIndex);
+                });
+            };
+
+            const startAutoSlide = () => {
+                stopAutoSlide();
+                autoSlideTimer = window.setInterval(() => {
+                    updateSlide(currentIndex + 1);
+                }, 4500);
+            };
+
+            const stopAutoSlide = () => {
+                if (autoSlideTimer) {
+                    window.clearInterval(autoSlideTimer);
+                }
+            };
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlide(index);
+                });
+            });
+
+            testimonialSection.addEventListener('mouseenter', stopAutoSlide);
+            testimonialSection.addEventListener('mouseleave', startAutoSlide);
+
+            let touchStartX = 0;
+            slider.addEventListener('touchstart', (event) => {
+                touchStartX = event.touches[0].clientX;
+                stopAutoSlide();
+            }, { passive: true });
+
+            slider.addEventListener('touchend', (event) => {
+                const touchEndX = event.changedTouches[0].clientX;
+                const delta = touchEndX - touchStartX;
+                if (Math.abs(delta) > 50) {
+                    updateSlide(delta < 0 ? currentIndex + 1 : currentIndex - 1);
+                }
+                startAutoSlide();
+            });
+
+            updateSlide(0);
+            startAutoSlide();
+        }
     </script>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
