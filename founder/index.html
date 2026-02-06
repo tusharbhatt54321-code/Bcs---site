@@ -79,6 +79,21 @@
   margin: 0 auto 1rem;
   object-fit: contain;
 }
+
+.booking-frame-wrapper {
+  margin-top: 1.5rem;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  background: #fff;
+}
+
+.booking-iframe {
+  width: 100%;
+  min-height: 760px;
+  border: 0;
+  display: block;
+}
 </style>
 
 </head>
@@ -167,10 +182,21 @@
     </div>
 
   </div>
+        </section>
 
+        <section class="section">
+            <h2>Request a Consultation with the Founder</h2>
+            <p>Connect directly with the founder for strategic, tax, and compliance advisory.</p>
+            <div class="booking-frame-wrapper">
+                <iframe
+                    class="booking-iframe"
+                    title="Founder Consultation Request Form"
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdPlaceholder/viewform?embedded=true"
+                    loading="lazy"
+                >Loading…</iframe>
+            </div>
         </section>
     </main>
-
     <footer>
         <p>Bhatt Consultancy Services | Founder-led advisory for strategy, finance, compliance, and growth.</p>
     </footer>
